@@ -10,8 +10,8 @@ from extract_utils.main import ( ExtractUtils, ExtractUtilsModule )
 
 namespace_imports = [
     "hardware/oplus",
-    "hardware/qcom-caf/sm8750",
-    "vendor/oneplus/sm8750-common",
+    "hardware/qcom-caf/sm8850",
+    "vendor/oneplus/sm8850-common",
     "vendor/qcom/opensource/commonsys-intf/display",
 ]
 
@@ -72,5 +72,5 @@ module = ExtractUtilsModule(
 )
 
 if __name__ == "__main__":
-    utils = ExtractUtils.device_with_common(module, "sm8750-common", module.vendor)
+    utils = ExtractUtils.device_with_common(module, "sm8850-common", module.vendor)
     utils.run()

@@ -8,7 +8,7 @@
 BOARD_SUPER_PARTITION_SIZE := 13329498112
 
 # Include the common OEM chipset BoardConfig.
-include device/oneplus/sm8750-common/BoardConfigCommon.mk
+include device/oneplus/sm8850-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/oneplus/infinity
 
