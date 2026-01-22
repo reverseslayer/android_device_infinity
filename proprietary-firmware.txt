@@ -1,0 +1,33 @@
+## All proprietary files from this list, unless pinned and noted otherwise,
+## are from OnePlus 15 (CPH2749_16.0.2.402(EX01)).
+
+abl.img;AB
+aop.img;AB
+aop_config.img;AB
+bluetooth.img;AB
+cpucp.img;AB
+cpucp_dtb.img;AB
+devcfg.img;AB
+dsp.img;AB
+engineering_cdt.img;AB
+featenabler.img;AB
+hyp.img;AB
+imagefv.img;AB
+keymaster.img;AB
+modem.img;AB
+oplus_sec.img;AB
+pdp.img;AB
+pdp_cdb.img;AB
+pvmfw.img;AB
+qupfw.img;AB
+shrm.img;AB
+soccp_dcd.img;AB
+soccp_debug.img;AB
+splash.img;AB
+spuservice.img;AB
+tz.img;AB
+uefi.img;AB
+uefisecapp.img;AB
+xbl.img;AB
+xbl_config.img;AB
+xbl_ramdump.img;AB
