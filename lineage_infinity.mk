@@ -8,17 +8,17 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from dodge device
-$(call inherit-product, device/oneplus/dodge/device.mk)
+# Inherit from infinity device
+$(call inherit-product, device/oneplus/infinity/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_CPH2749
-PRODUCT_DEVICE := CPH2749
+PRODUCT_NAME := lineage_infinity
+PRODUCT_DEVICE := infinity
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := CPH2749
+PRODUCT_MODEL := infinity
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
