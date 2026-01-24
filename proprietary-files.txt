@@ -761,7 +761,9 @@ odm/lib64/camera/components/com.oplus.node.sstabdefer.so
 odm/lib64/camera/components/com.oplus.node.sstabphoto.so
 odm/lib64/camera/components/com.oplus.node.sstabrealt.so
 odm/lib64/camera/components/com.oplus.node.videoainr.so
+odm/lib64/libVideoAIProc.so
 odm/lib64/camera/components/com.oplus.node.videomlft.so
+odm/lib64/libVideoMLFT.so
 odm/lib64/camera/components/com.oplus.stats.aec.so
 odm/lib64/camera/components/com.oplus.stats.af.so
 odm/lib64/camera/components/com.oplus.stats.awb.so
@@ -801,6 +803,7 @@ odm/lib64/camera/libpdCustomParam_Cam2.bin
 odm/lib64/camera/libpdCustomParam_Cam3.bin
 odm/lib64/camera/revision.txt
 odm/lib64/hw/camera.oemlayer.v2.so
+odm/lib64/camera.oemlayer.uilayer.so
 odm/lib64/com.oplus.mcx.linearmapper.so
 odm/lib64/lib2DSlender.so
 odm/lib64/libAECParamParser.so
@@ -834,6 +837,7 @@ odm/lib64/libOPAlgoCamFaceBeautyCap.so
 odm/lib64/libOPAlgoCamFaceRestore.so
 odm/lib64/libOPAlgoCamGroupClassifier.so
 odm/lib64/libOPAlgoCamHybridRaw.so
+odm/lib64/libOPAlgoCamSegment.so
 odm/lib64/libOPAlgoCamSinglePortrait.so
 odm/lib64/libOPLUSMotionDetection.so
 odm/lib64/libOplusPDCore.so
@@ -901,6 +905,8 @@ odm/lib64/libhybridraw_datas.so
 odm/lib64/libhybridraw_tuningparams.so
 odm/lib64/libimgClarityEvaluate.so
 odm/lib64/libmpbase.so
+odm/lib64/libMNN.so
+odm/lib64/libSpecRecon.so
 odm/lib64/libmsnativefilter.so
 odm/lib64/libmvgcommon.so
 odm/lib64/libmvgfusion.so
@@ -927,6 +933,8 @@ odm/lib64/vendor.oplus.hardware.camera.aon-service-impl.so
 odm/lib64/vendor.oplus.hardware.camera_rfi-V3-ndk.so
 odm/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk.so
 odm/lib64/vendor.oplus.hardware.sendextcamcmd-V1-service-impl.so
+odm/lib64/libhcsutils.so
+odm/lib64/libhcsfwk.so
 odm/lib64/vendor.oplus.hardware.sendextcamcmd-V2-ndk.so
 vendor/bin/hw/vendor.qti.camera.provider-service_64
 vendor/etc/init/vendor.qti.camera.provider-service_64.rc
@@ -965,6 +973,7 @@ vendor/lib64/camera/components/com.qti.node.gme.so
 vendor/lib64/camera/components/com.qti.node.gpu.so
 vendor/lib64/camera/components/com.qti.node.gyrornn.so
 vendor/lib64/camera/components/com.qti.node.hdl.so
+vendor/lib64/libcamxhexlpservicebase.so
 vendor/lib64/camera/components/com.qti.node.hdr10pgen.so
 vendor/lib64/camera/components/com.qti.node.hdr10phist.so
 vendor/lib64/camera/components/com.qti.node.hdralign.so
@@ -980,6 +989,7 @@ vendor/lib64/camera/components/com.qti.node.pncdc.so
 vendor/lib64/camera/components/com.qti.node.qsatalign.so
 vendor/lib64/camera/components/com.qti.node.rectification.so
 vendor/lib64/camera/components/com.qti.node.remosaic.so
+odm/lib64/libremosaic_wrapper.so
 vendor/lib64/camera/components/com.qti.node.sat.so
 vendor/lib64/camera/components/com.qti.node.seg.so
 vendor/lib64/camera/components/com.qti.node.spdepth.so
@@ -1027,6 +1037,8 @@ vendor/lib64/camera/components/com.qti.stats.roimixerlib.so
 vendor/lib64/camera/components/com.qti.stats.roimixer.so
 vendor/lib64/camera/components/com.qti.stats.statsgenerator.so
 vendor/lib64/camera/components/com.qti.stats.tracker.so
+vendor/lib64/com.qti.stats.sotr.so
+
 vendor/lib64/camera/components/libcamxdummysatsnapshotfusionwrapper.so
 vendor/lib64/camera/components/libcamxdummysatsoftwarefusionwrapper.so
 vendor/lib64/camera/components/libcamxdummysatwrapper.so
@@ -1113,7 +1125,12 @@ vendor/lib64/camera/infinitifront_4.pb
 vendor/lib64/camera/lafafront_4.pb
 vendor/lib64/camera/qfdserviceconfig.bin
 vendor/lib64/hw/camera.qcom.sm8850.so
+vendor/lib64/libcamxofeswl.so
+
 vendor/lib64/hw/camera.qcom.so
+vendor/lib64/hw/camera.qcom.core.so
+vendor/lib64/libcamxcslhw.so
+odm/lib64/vendor.oplus.hardware.camera_rfi-V1-service-impl.so
 vendor/lib64/hw/com.qti.chi.offline.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/camx.device-impl.so
@@ -1146,6 +1163,7 @@ vendor/lib64/com.qti.feature2.statsregeneration.so
 vendor/lib64/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.swmf.so
 vendor/lib64/com.qti.qseeaon.so
+vendor/lib64/libqshcamera_sensinghubapi.so
 vendor/lib64/com.qti.qseeutils.so
 vendor/lib64/com.qti.settings.sm8850.so
 vendor/lib64/com.qti.stats.common.so
@@ -1163,25 +1181,35 @@ vendor/lib64/libbgstatsmerger.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
 vendor/lib64/libcamxcommonutils.so
+odm/lib64/libopluscameraframeboost.so
 vendor/lib64/libcamxcoreutils.so
 vendor/lib64/libcamxcsl.so
 vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libcamxfdengine.so
 vendor/lib64/libcamxhwlfrontend.so
+vendor/lib64/libcamxhwquery.so
 vendor/lib64/libcamxhwlipedriver.so
 vendor/lib64/libcamxhwnodecontext.so
 vendor/lib64/libcamxifestriping.so
 vendor/lib64/libcamximageformatutils.so
+vendor/lib64/libcamerabuffer.so
 vendor/lib64/libcamxncsdatafactory.so
 vendor/lib64/libcamxods.so
 vendor/lib64/libcamxofehwl.so
 vendor/lib64/libcamxqsatalgo.so
+vendor/lib64/libcamxsocketserverutil.so
+vendor/lib64/libcamxasyncdumpmanager.so
+vendor/lib64/libcamxdumpinforecorder.so
+vendor/lib64/com.qti.sfw.settings.so
+vendor/lib64/libcamxmetadata.so
 vendor/lib64/libcamxsettingsmanager.so
 vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libcamxvppservicebase.so
 vendor/lib64/libchifeature2.so
+vendor/lib64/com.qti.camx.chiiqutils.so
+vendor/lib64/com.qti.chifeaturecompatibility.so
 vendor/lib64/libchilog.so
 vendor/lib64/libchinodeevautils.so
 vendor/lib64/libchinodehmeutils.so
@@ -1232,10 +1260,13 @@ vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libtfestriping.so
 vendor/lib64/libubifocus.so
 vendor/lib64/libvideoml.so
-vendor/lib64/vendor.oplus.hardware.camera_rfi-V3-ndk.so
 vendor/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so
+odm/lib64/camera.oemlayer.healthmonitor.so
+odm/lib64/camera.oemlayer.logger.so
+odm/lib64/camera.oemlayer.adapter.so
+vendor/lib64/libchicore.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00
