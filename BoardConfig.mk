@@ -7,6 +7,9 @@
 # Partitions
 BOARD_SUPER_PARTITION_SIZE := 13329498112
 
+# Fix for mismatch of android.media.audio.common.types-V4 & V5 mismatch
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
+
 # Include the common OEM chipset BoardConfig.
 include device/oneplus/sm8850-common/BoardConfigCommon.mk
 
