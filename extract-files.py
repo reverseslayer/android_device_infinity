@@ -5,7 +5,7 @@
 #
 
 from extract_utils.fixups_blob import ( blob_fixup, blob_fixups_user_type )
-from extract_utils.fixups_lib import ( lib_fixups )
+from extract_utils.fixups_lib import ( lib_fixups, lib_fixup_remove )
 from extract_utils.main import ( ExtractUtils, ExtractUtilsModule )
 
 namespace_imports = [
@@ -15,7 +15,31 @@ namespace_imports = [
     "vendor/qcom/opensource/commonsys-intf/display",
 ]
 
+lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
+    'android.hardware.camera.device-V2-ndk': 'android.hardware.camera.device-V3-ndk',
+    'android.hardware.camera.metadata-V2-ndk': 'android.hardware.camera.metadata-V3-ndk',
+    'android.hardware.graphics.allocator-V1-ndk': 'android.hardware.graphics.allocator-V2-ndk',
+    'vendor.oplus.hardware.charger-V8-ndk': lambda lib, part: 'vendor.oplus.hardware.charger-V9-ndk',
+    (
+        'android.hardware.camera.common-V1-ndk',
+        'android.hardware.graphics.common-V5-ndk',
+        'vendor.qti.hardware.camera.offlinecamera-V2-ndk',
+        'libstdc++',
+    ): lib_fixup_remove,
+}
+
 blob_fixups: blob_fixups_user_type = {
+    'vendor/lib64/com.oplus.mcx.linearmapper.so': blob_fixup()
+        .replace_needed('vendor.oplus.hardware.charger-V8-ndk.so', 'vendor.oplus.hardware.charger-V9-ndk.so'),
+    'vendor/lib64/vendor.oplus.hardware.charger-V1-service-impl.so': blob_fixup()
+        .replace_needed('vendor.oplus.hardware.charger-V8-ndk.so', 'vendor.oplus.hardware.charger-V9-ndk.so'),
+    'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so': blob_fixup()
+        .replace_needed('android.hardware.camera.metadata-V2-ndk.so', 'android.hardware.camera.metadata-V3-ndk.so')
+        .replace_needed('android.hardware.camera.device-V2-ndk.so', 'android.hardware.camera.device-V3-ndk.so')
+        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
+    'vendor/lib64/camera/components/com.qti.node.dewarp.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
     'odm/etc/camera/CameraHWConfiguration.config': blob_fixup()
         .regex_replace(r'(enableSWfdForThirdCamUnit += )TRUE', r'\1FALSE')
         .regex_replace(r'(fdSupport += )TRUE;', r'\1FALSE;'),
@@ -52,14 +76,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.sensors-V2-ndk.so', 'android.hardware.sensors-V3-ndk.so'),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('NFC_DEBUG_ENABLED=1', 'NFC_DEBUG_ENABLED=0'),
-    (
-        'vendor/lib64/camera/components/com.qti.node.dewarp.so',
-        'vendor/lib64/hw/com.qti.chi.override.so',
-        'vendor/lib64/libcamximageformatutils.so',
-        'vendor/lib64/libchifeature2.so',
-        'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so',
-    ): blob_fixup()
-        .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
