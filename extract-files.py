@@ -11,7 +11,7 @@ from extract_utils.main import ( ExtractUtils, ExtractUtilsModule )
 namespace_imports = [
     "hardware/oplus",
     "hardware/qcom-caf/sm8850",
-    "vendor/oneplus/sm8850-common",
+    "vendor/oplus/sm8850-common",
     "vendor/qcom/opensource/commonsys-intf/display",
 ]
 
@@ -80,7 +80,7 @@ blob_fixups: blob_fixups_user_type = {
 
 module = ExtractUtilsModule(
     "infinity",
-    "oneplus",
+    "oplus",
     namespace_imports=namespace_imports,
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

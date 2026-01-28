@@ -70,7 +70,7 @@ $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,ENABLE_HTPR,false)
 $(call soong_config_set,OPLUS_LINEAGE_VIBRATOR_HAL,USE_EFFECT_STREAM,true)
 
 # Inherit from the common OEM chipset makefile.
-$(call inherit-product, device/oneplus/sm8850-common/common.mk)
+$(call inherit-product, device/oplus/sm8850-common/common.mk)
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oneplus/infinity/infinity-vendor.mk)
+$(call inherit-product, vendor/oplus/infinity/infinity-vendor.mk)

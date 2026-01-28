@@ -11,9 +11,9 @@ BOARD_SUPER_PARTITION_SIZE := 13329498112
 BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
 
 # Include the common OEM chipset BoardConfig.
-include device/oneplus/sm8850-common/BoardConfigCommon.mk
+include device/oplus/sm8850-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/oneplus/infinity
+DEVICE_PATH := device/oplus/infinity
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := OP5D0DL1,OP5D55L1
@@ -33,4 +33,4 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
 
 # Include the proprietary files BoardConfig.
-include vendor/oneplus/infinity/BoardConfigVendor.mk
+include vendor/oplus/infinity/BoardConfigVendor.mk
