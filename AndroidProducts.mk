@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_infinity.mk
+    $(LOCAL_DIR)/lineage_infiniti.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_infinity-trunk_staging-userdebug \
-    lineage_infinity-bp2a-userdebug
+    lineage_infiniti-trunk_staging-userdebug \
+    lineage_infiniti-bp2a-userdebug

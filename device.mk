@@ -73,4 +73,4 @@ $(call soong_config_set,OPLUS_LINEAGE_VIBRATOR_HAL,USE_EFFECT_STREAM,true)
 $(call inherit-product, device/oplus/sm8850-common/common.mk)
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oplus/infinity/infinity-vendor.mk)
+$(call inherit-product, vendor/oplus/infiniti/infiniti-vendor.mk)
