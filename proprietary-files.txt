@@ -7,8 +7,15 @@ odm/etc/acdbdata/up_ve_enpuv6_ha.eai
 odm/etc/acdbdata/up_ve_enpuv6_hh.eai
 
 # Audio
+vendor/bin/hw/audiohalservice.qti
+vendor/etc/vintf/manifest/manifest_audiocorehal_default.xml
+vendor/etc/vintf/manifest/audioeffectservice_qti.xml
 odm/lib64/liboprec_audrec.so
 odm/lib64/liboprec_audrec_wrapper.so
+vendor/lib64/libagmipcservice.so
+vendor/lib64/libpaleventnotifier.so
+vendor/lib64/libpalipcservice.so
+
 
 # Audio configs
 odm/etc/mixer_paths.xml
@@ -1122,6 +1129,8 @@ vendor/lib64/camera/infinitifront_4.pb
 vendor/lib64/camera/lafafront_4.pb
 vendor/lib64/camera/qfdserviceconfig.bin
 vendor/lib64/hw/camera.qcom.sm8850.so
+vendor/lib64/vendor.qti.hardware.display.snapalloc-impl.so
+vendor/lib64/vendor.qti.hardware.agm-V1-ndk.so
 vendor/lib64/libcamxofeswl.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/camera.qcom.core.so
